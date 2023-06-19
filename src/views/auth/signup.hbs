@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-8 mt-5 mx-auto">
+    <div class="card bg-black text-white p-3 shadow card-index">
+      <div class="card-header p-3">
+        <h3 class="text-center">
+          Registrarse
+        </h4>
+      </div>
+      <div class="card-body mt-3">
+        <form  action="/auth/signup" method="POST">
+          <div class="mb-3">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              name="name"
+              placeholder="Nombre"
+              value="{{name}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control bg-dark text-white"
+              name="email"
+              placeholder="Email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="password"
+              placeholder="Contraseña"
+              value="{{password}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Confirmar Contraseña:</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="confirm_password"
+              placeholder="Confirmar Contraseña"
+              value="{{confirm_password}}"
+            />
+          </div>
+          <button class="btn btn-success btn-block">
+            Registrar
+          </button>
+        </form>
+      </div>
+      <p class="text-center">Ya Tienes Una Cuenta?
+        <a href="/auth/signin" class="text-info">Iniciá Sesión</a></p>
+    </div>
+  </div>
+</div>

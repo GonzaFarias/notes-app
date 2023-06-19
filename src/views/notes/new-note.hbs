@@ -1,0 +1,39 @@
+<div class="col-md-8 mx-auto">
+  <div class="card p-2 shadow card-background">
+    <div class="card-header bg-primary text-center">
+      <h3 class="text-white m-2">Nueva Nota</h3>
+    </div>
+    <div class="card-body text-right">
+      <form action="/notes/new-note" method="POST">
+        <div class="mb-3">
+          <label for="title">Título:</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            placeholder="Título"
+            autofocus
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">Descripción:</label>
+          <textarea
+            name="description"
+            class="form-control"
+            placeholder="Descripción"
+          ></textarea>
+        </div>
+          <input
+            hidden
+            type="text"
+            name="hour"
+            value=getDate()
+            autofocus
+          />
+        <button class="btn btn-primary w-100" type="submit">
+          Añadir
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

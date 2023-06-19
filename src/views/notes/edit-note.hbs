@@ -1,0 +1,40 @@
+{{#each errors}}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{{/each}}
+
+<div class="col-md-8 mx-auto">
+  <div class="card p-2 shadow card-background card-index">
+    <div class="card-header text-center">
+      <h3 >Editar Nota</h3>
+    </div>
+    <div class="card-body">
+      <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="mb-3">
+          <label for="title">Título:</label>
+          <input
+            type="text"
+            name="title"
+            class="form-control"
+            value="{{note.title}}"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">Descripción:</label>
+          <textarea
+            name="description"
+            class="form-control"
+          >{{note.description}}</textarea>
+        </div>
+        <button class="btn btn-primary w-100" type="submit">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

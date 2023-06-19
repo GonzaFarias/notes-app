@@ -1,0 +1,75 @@
+body {
+  background: url("https://images.freecreatives.com/wp-content/uploads/2015/05/black-paper-background.jpg");
+}
+
+h1, h2, h3, h4, button[type=submit]{
+  font-family: "Architects Daughter", cursive;
+}
+.logo {
+  width: 22%;
+  filter: invert(100%);
+}
+
+.bg-black {
+  background: #090909;
+}
+
+.shadow-w {
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px;
+}
+
+.card-index{
+  border-start-start-radius: 95% 6%;
+  border-end-end-radius: 95% 6%;
+}
+
+.card-background{
+  background: url("https://st4.depositphotos.com/8608596/24882/i/450/depositphotos_248828810-stock-photo-abstract-crumpled-white-paper-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar{
+  border: none;
+}
+.navbar-brand{
+  font-family: "Architects Daughter", cursive;
+  margin-bottom: 5px;
+}
+footer {
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  padding: 15px 0 0 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer a {
+  color: white;
+}
+
+.navbar-toggler{
+  border-radius: 0;
+  border: 0;
+}
+/* Barra de navegación */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d7d7d7;
+}

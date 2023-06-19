@@ -1,0 +1,17 @@
+<div class="card card-body p-5 mt-4 shadow card-index card-background">
+  <h1 class="display-4">App de Notas!</h1>
+  <p class="lead">Una app simple para manejar notas, diseñada con NodeJS, Express, MongoDB y Javascript.</p>
+  <hr class="my-4">
+  {{#if user}}
+  <div>
+    <a class="btn btn-primary btn-md shadow" href="/notes/add" role="button">Añadir nota</a>
+  </div>
+  {{else}}
+    <div>
+    <a class="btn btn-primary btn-md shadow me-1" href="/auth/signin">Iniciar Sesión</a>
+    <a class="btn btn-primary btn-md shadow" href="/auth/signup" role="button">Registrarse</a>
+
+  </div>
+  {{/if}}
+
+</div>
