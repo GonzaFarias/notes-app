@@ -1,7 +1,7 @@
 {
   "name": "notes-app",
   "version": "2.0.1",
-  "description": "notes App",
+  "description": "Notes App",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,6 +19,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
+    "mongodb": "^5.6.0",
     "mongoose": "^6.5.2",
     "morgan": "^1.10.0",
     "passport": "^0.6.0",
@@ -30,4 +31,3 @@
     "nodemon": "^2.0.19"
   }
 }
- 

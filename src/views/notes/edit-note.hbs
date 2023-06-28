@@ -31,6 +31,17 @@
             class="form-control"
           >{{note.description}}</textarea>
         </div>
+        <div class="mb-3">
+          <label for="dateLimit">Fecha Limite:</label>
+          <input
+            title="No editable, no promuevas la procrastinación"
+            type="text"
+            name="dateLimit"
+            class="form-control"
+            value="{{note.dateLimit}}"
+            disabled
+          />
+        </div>
         <button class="btn btn-primary w-100" type="submit">
           Guardar
         </button>

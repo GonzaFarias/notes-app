@@ -14,6 +14,10 @@ const NoteSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dateLimit:{
+      type: Date,
+      required: true
+    },
   },
   {
     timestamps: true,

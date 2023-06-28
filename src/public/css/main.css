@@ -55,6 +55,10 @@ footer a {
   border-radius: 0;
   border: 0;
 }
+
+.text-danger{
+  color: red;
+}
 /* Barra de navegación */
 
 ::-webkit-scrollbar {

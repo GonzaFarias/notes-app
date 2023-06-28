@@ -8,10 +8,14 @@
         </h4>
         <p>{{ description }} </p>
         <!-- ELIMINAR -->
-        <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
-          <input type="hidden" name="_method" value="DELETE">
-          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
-        </form>
+        <div class="d-flex justify-content-between align-items-center">
+          <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST" onsubmit="return confirmDelete(event)">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+          </form>
+           <p class="small mb-0">Vencimiento: {{dateLimit}}</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -28,3 +32,23 @@
     <a class="btn btn-light btn-md shadow" href="/notes/add" role="button">Añadir nota</a>
   </div>
 </div>
+
+<script>
+  function confirmDelete(event) {
+    event.preventDefault(); 
+    Swal.fire({
+      title: 'Confirmar eliminación',
+      text: '¿Estás seguro de que deseas eliminar esta nota?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#000000',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        event.target.submit();
+      }
+    });
+  }
+</script>
