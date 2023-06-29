@@ -25,7 +25,7 @@ export const createNewNote = async (req, res) => {
     const inputDate = new Date(dateLimit).setHours(0, 0, 0, 0);
 
     if (inputDate < currentDate) {
-      errors.push({ text: "La fecha límite debe ser mayor a la fecha actual." });
+      errors.push({ text: "La fecha límite debe ser mayor o igual a la actual." });
     }
     if(isNaN(new Date(dateLimit))){
       errors.push({ text: "Ingrese el formato YYYY-MM-DD" });
